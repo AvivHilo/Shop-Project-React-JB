@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/AvivHilo.github.io/Shop-Project-React-JB/static/css/main.17cd7b09.css",
+    "main.js": "/AvivHilo.github.io/Shop-Project-React-JB/static/js/main.bc4c18db.js",
+    "static/js/787.61da6377.chunk.js": "/AvivHilo.github.io/Shop-Project-React-JB/static/js/787.61da6377.chunk.js",
+    "index.html": "/AvivHilo.github.io/Shop-Project-React-JB/index.html",
+    "main.17cd7b09.css.map": "/AvivHilo.github.io/Shop-Project-React-JB/static/css/main.17cd7b09.css.map",
+    "main.bc4c18db.js.map": "/AvivHilo.github.io/Shop-Project-React-JB/static/js/main.bc4c18db.js.map",
+    "787.61da6377.chunk.js.map": "/AvivHilo.github.io/Shop-Project-React-JB/static/js/787.61da6377.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.17cd7b09.css",
+    "static/js/main.bc4c18db.js"
+  ]
+}
