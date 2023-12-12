@@ -1,6 +1,6 @@
 import "./App.css";
 import { React, useState } from "react";
-import { BrowserRouter, Route, Routes, Link} from "react-router-dom";
+import { BrowserRouter, Route, Routes} from "react-router-dom";
 
 import NewProductPage from "./components/NewProductPage";
 
@@ -8,7 +8,7 @@ import ListProducts from "./components/ListProducts";
 import SelectCategory from "./components/SelectCategory";
 
 
-const hostURL = "http://127.0.0.1:8000";
+const apiURL = "http://127.0.0.1:8000/api";
 
 export default function App() {
   const [category, setcategory] = useState(null);
@@ -17,33 +17,22 @@ export default function App() {
     <>
     <BrowserRouter>
       <Routes>
-
         <Route path="/" element=
         {<>
-        <div class="container-md">
-          <div class="row justify-content-md-center">
-            <div class="col col-6">
-            <SelectCategory setcategory={setcategory} URL={hostURL}/>
+        {/*-- Header--*/}
+        <header class="bg-dark py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">Shop in style</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">With this shop hompeage template</p>
+                </div>
             </div>
-          </div>
-
-          <br></br>
-
-          <div class="row justify-content-md-center">
-            <Link to="newproduct" class="col col-6">
-              <button class="btn btn-success fs-5 fw-bold">+</button>
-            </Link>
-          </div>
-
-          <br></br><br></br>
-
-          <div class="row justify-content-md-center" id="productList">
-            <ListProducts c={category} URL={hostURL}/>
-          </div>
-        </div>
+        </header>
+        <SelectCategory setcategory={setcategory} URL={apiURL}/>
+        <ListProducts c={category} URL={apiURL}/>
         </>}/>
 
-        <Route path="newproduct" element={<NewProductPage URL={hostURL}/>}/>
+        <Route path="newproduct" element={<NewProductPage URL={apiURL}/>}/>
 
       </Routes>
     </BrowserRouter>
